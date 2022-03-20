@@ -11,7 +11,9 @@ TEMP_SFTP_FILE='../sftp'
 printf "%s" "$4" >$TEMP_SSH_PRIVATE_KEY_FILE
 # avoid Permissions too open
 chmod 600 $TEMP_SSH_PRIVATE_KEY_FILE
-echo $TEMP_SSH_PRIVATE_KEY_FILE
+echo "Here is the SSH KEY file:"
+cat $TEMP_SSH_PRIVATE_KEY_FILE
+echo "END SSH KEY FILE"
 
 if test $7 = "true"; then
   echo "Connection via sftp protocol only, skip the command to create a directory"
